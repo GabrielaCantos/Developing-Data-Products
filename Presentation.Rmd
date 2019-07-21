@@ -1,0 +1,58 @@
+---
+title: "Weight versus age of chicks on different diets"
+author: "Gabriela Cantos"
+date: "7/20/2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+
+Using the application developed in shiny with data provided in ChickWeight, the effect of different types of diets over the weight of chickens can be determined using linear regression model where the outcome variable is the weight and predictor variable is the age.
+
+This application was designed for Developing Data Products as part of the Coursera Data Science Speicalization Course.
+
+The first part of the assignment to create a Shiny application can be found here: 
+
+The second part of the assigment to prepare a reproducible pitch presentation about the application can be found here: 
+
+
+In this presentation, the dataset ChickWeight will be shown and a matrix plot of variables that are used in the app is presented.
+
+
+## Data
+
+ The dataset was taken from ChickWeight dataset in R. The ChickWeight dataframe has 578 rows and 4 columns from an experiment on the effect of diet on early growth of chicks.
+ 
+This dataframe contains the following columns:
+
+- weight: a numeric vector giving the body weight of the chick (gm).
+
+-Time: a numeric vector giving the number of days since birth when the measurement was made.
+
+- Chick: an ordered factor with levels 18 < ... < 48 giving a unique identifier for the chick. The ordering of the levels groups chicks on the same diet together and orders them according to their final weight (lightest to heaviest) within diet.
+
+- Diet:  a factor with levels 1, ..., 4 indicating which experimental diet the chick received 
+
+
+## ChickWeight dataset 
+
+To see the variables of the ChickWeight dataset, we can use head(ChickWeight) to view the first 6 lines of the data.
+
+```{r cars, echo = TRUE, comment= ""}
+
+head(ChickWeight)
+
+```
+
+## Plotting data
+
+
+```{r pressure}
+
+plot(weight ~ Time, data =ChickWeight)
+```
+
